@@ -31,5 +31,5 @@ dist-ssr
 # Bundled node runtime (large binaries)
 node-dist/
 
-# Contact form runtime data (enquiries + email log)
-data/
+# Contact form runtime data (enquiries + email log) — repo root only
+/data/
