@@ -1,4 +1,4 @@
-import { handleContactHttpRequest } from '../server/contactLogic';
+import { handleContactHttpRequest } from '../server/contactLogic.js';
 
 export const config = { api: { bodyParser: false } };
 
