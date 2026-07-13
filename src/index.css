@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+
+@theme {
+  --color-primary-bg: #0B0B0F;
+  --color-secondary-bg: #141419;
+  --color-warm-ivory: #F7F4EE;
+  --color-brand-orange: #FF6B35;
+  --color-deep-teal: #0F766E;
+  --color-teal-accent: #0d9488;
+  --color-soft-gray: #9CA3AF;
+  --color-border-overlay: rgba(255, 255, 255, 0.08);
+
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--color-primary-bg);
+    color: var(--color-warm-ivory);
+    overflow-x: hidden;
+  }
+
+  body {
+    background-color: var(--color-primary-bg);
+    color: var(--color-warm-ivory);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0B0B0F;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #24242F;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #FF6B35;
+  }
+
+  /* Focus states for accessibility */
+  *:focus-visible {
+    outline: 2px solid #FF6B35;
+    outline-offset: 2px;
+  }
+}
+
+/* Glassmorphism helpers */
+.glass-panel {
+  background: rgba(20, 20, 25, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-navbar {
+  background: rgba(11, 11, 15, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Gradients */
+.gradient-text {
+  background: linear-gradient(135deg, #F7F4EE 30%, #FF6B35 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-teal {
+  background: linear-gradient(135deg, #0F766E 0%, #FF6B35 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.glow-orange {
+  box-shadow: 0 0 40px rgba(255, 107, 53, 0.15);
+}
+
+.glow-teal {
+  box-shadow: 0 0 40px rgba(15, 118, 110, 0.15);
+}
+
+/* Hero 3D canvas container */
+.hero-canvas-container {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+/* Glassmorphism hero overlay */
+.hero-glass-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  background: radial-gradient(ellipse 80% 60% at 50% 40%,
+      transparent 0%,
+      rgba(11, 11, 15, 0.45) 100%);
+  backdrop-filter: blur(1.5px);
+  -webkit-backdrop-filter: blur(1.5px);
+}
+
+/* ─── Card Variant: Core Capabilities ─────────────────────────────────────── */
+/* Gradient border via background-clip trick; amber glow amplified on hover    */
+.card-capability {
+  /* override the solid white/8 border from glass-panel */
+  border: 1px solid transparent;
+  background-clip: padding-box;
+  /* inner fill + gradient border layer */
+  background-image:
+    linear-gradient(rgba(20, 20, 25, 0.85), rgba(20, 20, 25, 0.85)),
+    linear-gradient(135deg, rgba(255, 107, 53, 0.35) 0%, rgba(255, 193, 80, 0.18) 50%, rgba(255, 107, 53, 0.08) 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.card-capability:hover {
+  box-shadow:
+    0 8px 32px rgba(255, 160, 60, 0.22),
+    0 2px 8px rgba(255, 107, 53, 0.12) !important;
+  border-image: none;
+  background-image:
+    linear-gradient(rgba(20, 20, 25, 0.9), rgba(20, 20, 25, 0.9)),
+    linear-gradient(135deg, rgba(255, 140, 50, 0.55) 0%, rgba(255, 200, 80, 0.28) 50%, rgba(255, 107, 53, 0.18) 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/* ─── Card Variant: Core Capabilities (stacked scroll) ────────────────────── */
+.capability-card {
+  position: relative;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0) 40%),
+    linear-gradient(160deg, rgba(28, 28, 34, 0.92), rgba(15, 15, 20, 0.9));
+  border: 1px solid rgba(255, 107, 53, 0.25);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45), 0 0 30px rgba(255, 107, 53, 0.08);
+  will-change: transform;
+  transition: transform 250ms ease-out, box-shadow 250ms ease-out, border-color 250ms ease-out;
+}
+
+.capability-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 107, 53, 0.5);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5), 0 0 60px rgba(255, 107, 53, 0.22);
+}
+
+/* ─── Card Variant: Why Us (premium SaaS stacked layout) ──────────────────── */
+.why-card-stack {
+  position: relative;
+  isolation: isolate;
+  height: 100%;
+}
+
+/* Offset depth layers behind the card to simulate physical stacking */
+.why-card-stack::before,
+.why-card-stack::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 107, 53, 0.06);
+  background: linear-gradient(160deg, rgba(18, 18, 20, 0.8), rgba(12, 12, 16, 0.6));
+  z-index: -1;
+  transition: transform 250ms ease;
+  will-change: transform;
+}
+
+.why-card-stack::before {
+  transform: translate(8px, 8px) scale(0.985);
+  opacity: 0.55;
+}
+
+.why-card-stack::after {
+  transform: translate(16px, 16px) scale(0.97);
+  opacity: 0.3;
+}
+
+.why-card-stack:hover::before {
+  transform: translate(14px, 14px) scale(0.985);
+}
+
+.why-card-stack:hover::after {
+  transform: translate(26px, 26px) scale(0.97);
+}
+
+/* Main premium card */
+.why-card {
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  border-radius: 1.5rem;
+  padding: 2.25rem;
+  /* very dark charcoal base + subtle warm brown/orange gradient overlay */
+  background:
+    radial-gradient(120% 85% at 50% 0%, rgba(255, 107, 53, 0.12), transparent 62%),
+    linear-gradient(160deg, #161316 0%, #121214 55%, #14110f 100%);
+  border: 1px solid rgba(255, 107, 53, 0.18);
+  box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.45),
+    0 4px 12px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(255, 107, 53, 0.04),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  /* transform/opacity-only animation for GPU-accelerated, smooth hover */
+  transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+  will-change: transform;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 107, 53, 0.42);
+  box-shadow:
+    0 30px 60px rgba(0, 0, 0, 0.55),
+    0 10px 24px rgba(0, 0, 0, 0.4),
+    0 0 50px rgba(255, 107, 53, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+/* Soft ambient orange glow that intensifies on hover (opacity-only) */
+.why-card-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: radial-gradient(420px circle at 50% 0%, rgba(255, 107, 53, 0.16), transparent 70%);
+  opacity: 0;
+  transition: opacity 250ms ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.why-card-stack:hover .why-card-glow {
+  opacity: 1;
+}
+
+/* Icon area: rounded square container with dark brown/orange background */
+.why-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;   /* 52px */
+  height: 3.25rem;
+  border-radius: 0.9rem;
+  background: linear-gradient(160deg, rgba(255, 107, 53, 0.22), rgba(120, 53, 20, 0.38));
+  border: 1px solid rgba(255, 107, 53, 0.35);
+  color: #FF6B35;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+  box-shadow: 0 8px 20px rgba(255, 107, 53, 0.18);
+  transition: transform 250ms ease, box-shadow 250ms ease;
+}
+
+.why-card:hover .why-card-icon {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(255, 107, 53, 0.3);
+}
+
+/* CTA link aligned to the bottom of the card */
+.why-card-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  align-self: flex-start;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #FF6B35;
+  transition: transform 250ms ease, color 250ms ease;
+}
+
+.why-card-cta .why-card-arrow {
+  transition: transform 250ms ease;
+}
+
+.why-card:hover .why-card-cta .why-card-arrow {
+  transform: translateX(6px);
+}
+
+/* ─── Card Variant: Stage connector line ───────────────────────────────────── */
+/* Wrap the stage grid in .stage-grid; each .card-stage except last gets a
+   right connector on md+ screens and a bottom connector on mobile           */
+.stage-grid {
+  position: relative;
+}
+
+.card-stage-wrapper {
+  position: relative;
+}
+
+/* Horizontal connector for md+ (right side of card, not on last) */
+@media (min-width: 768px) {
+  .card-stage-wrapper:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: -24px;
+    width: 24px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255, 107, 53, 0.6), transparent);
+    z-index: 10;
+  }
+}
+
+/* Vertical connector for mobile (bottom of card, not on last) */
+@media (max-width: 767px) {
+  .card-stage-wrapper:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    bottom: -24px;
+    left: 24px;
+    width: 1px;
+    height: 24px;
+    background: linear-gradient(180deg, rgba(255, 107, 53, 0.6), transparent);
+    z-index: 10;
+  }
+}
+
+/* ─── Secondary Button Styles (teal accent for non-primary CTAs) ─────────────────── */
+.btn-secondary {
+  border: 1px solid var(--color-teal-accent);
+  background: transparent;
+  color: var(--color-warm-ivory);
+  transition: all 0.2s ease-out;
+}
+
+.btn-secondary:hover {
+  background: rgba(13, 148, 136, 0.1);
+  border-color: var(--color-teal-accent);
+  color: var(--color-teal-accent);
+}
+
+/* ─── Alternating Icon Chip Styles (Technologies / Core Capabilities) ──────────── */
+.icon-chip-orange {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.15) 0%, rgba(255, 193, 80, 0.08) 100%);
+  border: 1px solid rgba(255, 107, 53, 0.2);
+}
+
+.icon-chip-teal {
+  background: linear-gradient(135deg, rgba(13, 148, 136, 0.15) 0%, rgba(13, 148, 136, 0.05) 100%);
+  border: 1px solid rgba(13, 148, 136, 0.25);
+}
+
+/* Icon chip hover states */
+.icon-chip-orange:hover {
+  border-color: rgba(255, 107, 53, 0.4);
+  box-shadow: 0 4px 16px rgba(255, 107, 53, 0.15);
+}
+
+.icon-chip-teal:hover {
+  border-color: rgba(13, 148, 136, 0.4);
+  box-shadow: 0 4px 16px rgba(13, 148, 136, 0.15);
+}
+
+/* ─── Link Hover Underline Styles ─────────────────────────────────────────────── */
+.link-underline {
+  position: relative;
+  text-decoration: none;
+}
+
+.link-underline::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--color-teal-accent);
+  transition: width 0.2s ease-out;
+}
+
+.link-underline:hover::after {
+  width: 100%;
+}
+
+/* Link underline for orange hover */
+.link-underline-orange::after {
+  background: var(--color-brand-orange);
+}
+
+/* Link underline for teal hover */
+.link-underline-teal::after {
+  background: var(--color-teal-accent);
+}
