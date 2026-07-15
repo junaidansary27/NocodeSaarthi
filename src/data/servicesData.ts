@@ -384,5 +384,260 @@ export const servicesData: Record<string, ServiceContent> = {
       company: 'Horizon Corp',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&auto=format&fit=crop&q=80'
     }
+  },
+  'email-marketing': {
+    id: 'email-marketing',
+    title: 'AI-Powered Email Marketing',
+    tagline: 'Convert inboxes into revenue engines with intelligent, automated campaigns.',
+    heroDesc: 'We engineer data-driven email systems that combine AI-generated copy, behavioral segmentation, and CRM-synced automation to nurture leads and close deals on autopilot.',
+    problem: {
+      title: 'Generic Blasts Are Quietly Burning Your Pipeline',
+      desc: 'Most teams still send the same mass newsletter to every contact. Without segmentation, personalization, or timing logic, open rates collapse and qualified leads slip into competitors’ funnels.',
+      points: [
+        'Low open and click rates from untargeted mass sends',
+        'Marketing hours drained by manual campaign assembly',
+        'Warm leads going cold without timely follow-ups',
+        'No measurable attribution between email activity and revenue'
+      ]
+    },
+    solution: {
+      title: 'Intelligent Lifecycle Email Engineering',
+      desc: 'We construct end-to-end email ecosystems where copy, audience, and cadence are driven by data and AI — not guesswork.',
+      points: [
+        { title: 'AI Campaign Copy Generation', desc: 'LLM pipelines draft on-brand subject lines, sequences, and A/B variants tailored to each segment.' },
+        { title: 'Behavioral Segmentation & Triggers', desc: 'Contacts are grouped by intent signals and routed into automated journeys the moment they act.' },
+        { title: 'CRM-Synced Drip Automation', desc: 'Every open, click, and reply syncs to HubSpot or Salesforce to keep sales perfectly informed.' }
+      ]
+    },
+    deliverables: [
+      'AI copywriting and sequence framework (cold + nurture)',
+      'Behavioral segmentation and tagging architecture',
+      'Automated drip and trigger workflows in your ESP',
+      'CRM / ESP two-way integration setup',
+      'Campaign analytics dashboard and reporting cadence'
+    ],
+    process: [
+      { step: '01', title: 'Audience Mapping', desc: 'Profiling segments, intent signals, and lifecycle stages.' },
+      { step: '02', title: 'Sequence Design', desc: 'Drafting AI copy and mapping trigger-based journeys.' },
+      { step: '03', title: 'Integration Sync', desc: 'Connecting ESP, CRM, and enrichment data sources.' },
+      { step: '04', title: 'Launch & Optimize', desc: 'Going live with A/B testing and performance tuning.' }
+    ],
+    technologies: ['Mailchimp', 'ActiveCampaign', 'HubSpot', 'SendGrid', 'Lemlist', 'n8n', 'OpenAI', 'Zapier'],
+    timeline: '3 - 5 Weeks',
+    faqs: [
+      { question: 'Can you run cold outreach without hurting deliverability?', answer: 'Yes. We configure warmed domains, SPF/DKIM/DMARC, and throttled sending schedules so cold sequences stay out of spam folders.' },
+      { question: 'Do the emails sound robotic?', answer: 'No. Our AI generates persona-aware copy reviewed against your brand voice, and we continuously refine it using real engagement data.' }
+    ],
+    testimonial: {
+      review: 'Our demo-booking rate from cold email tripled in six weeks. The AI sequences feel personal and our CRM finally reflects real engagement.',
+      author: 'Daniel Roche',
+      role: 'Head of Growth',
+      company: 'Brightwell SaaS',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80'
+    }
+  },
+  'mobile-application-development': {
+    id: 'mobile-application-development',
+    title: 'Mobile Application Development',
+    tagline: 'Launch sleek, high-performance apps on iOS and Android — fast.',
+    heroDesc: 'We design and ship cross-platform mobile applications using Flutter and React Native, backed by secure APIs and cloud infrastructure, ready for App Store and Play Store deployment.',
+    problem: {
+      title: 'Native Silos Are Multiplying Your Cost and Risk',
+      desc: 'Maintaining separate iOS and Android codebases doubles your engineering spend and fragments your roadmap. Slow releases and brittle integrations erode user trust.',
+      points: [
+        'Double the budget for two separate native teams',
+        'Fragmented releases causing inconsistent user experiences',
+        'Painful third-party API and payment integrations',
+        'App store rejections stalling go-to-market timelines'
+      ]
+    },
+    solution: {
+      title: 'Cross-Platform Apps With Native Performance',
+      desc: 'We build a single, beautifully crafted codebase that delivers near-native speed on every device, with the integrations and compliance your business needs.',
+      points: [
+        { title: 'Flutter & React Native Builds', desc: 'One codebase shipping pixel-perfect experiences to both app stores with native-grade rendering.' },
+        { title: 'Native Performance Optimization', desc: 'Skia rendering, native modules, and lazy loading keep animations smooth even on older devices.' },
+        { title: 'API & Store Deployment', desc: 'Secure REST/GraphQL integrations plus guided App Store and Play Store submission.' }
+      ]
+    },
+    deliverables: [
+      'Interactive Figma mobile prototype',
+      'Cross-platform app (Flutter / React Native) codebase',
+      'Secure backend API and authentication setup',
+      'Push notifications and deep-link configuration',
+      'App Store & Play Store submission package'
+    ],
+    process: [
+      { step: '01', title: 'UX Prototyping', desc: 'Designing flows, screens, and interaction models.' },
+      { step: '02', title: 'App Engineering', desc: 'Building features, state management, and UI systems.' },
+      { step: '03', title: 'API Integration', desc: 'Wiring auth, payments, and third-party services.' },
+      { step: '04', title: 'Store Deployment', desc: 'Testing on devices and publishing to both stores.' }
+    ],
+    technologies: ['Flutter', 'React Native', 'Dart', 'TypeScript', 'Node.js', 'Firebase', 'Supabase', 'Apple App Store', 'Google Play'],
+    timeline: '6 - 10 Weeks',
+    faqs: [
+      { question: 'Will a cross-platform app feel as fast as native?', answer: 'Yes. With Flutter’s Skia engine and React Native’s native modules, users experience fluid 60fps interactions indistinguishable from fully native apps.' },
+      { question: 'Can we later move to fully native code?', answer: 'Absolutely. We structure modules cleanly so performance-critical screens can be ported to Swift or Kotlin without rewriting the whole product.' }
+    ],
+    testimonial: {
+      review: 'They shipped our dual-platform app in eight weeks. Store rating is 4.8 and crash-free sessions sit above 99.5%. Flawless launch.',
+      author: 'Aisha Khan',
+      role: 'Product Lead',
+      company: 'UrbanMile',
+      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80'
+    }
+  },
+  'business-analytics': {
+    id: 'business-analytics',
+    title: 'Business Analytics & Intelligence',
+    tagline: 'Turn scattered data into executive-ready decisions.',
+    heroDesc: 'We build interactive Power BI dashboards, KPI trackers, and predictive analytics models that unify your data warehouses into a single source of truth for leadership.',
+    problem: {
+      title: 'Leaders Are Flying Blind on Fragmented Data',
+      desc: 'Critical metrics live in disconnected spreadsheets, ad-hoc exports, and tribal knowledge. By the time reports are compiled, the numbers are already stale and decisions lag the market.',
+      points: [
+        'Executive reports taking days of manual spreadsheet work',
+        'No single, trustworthy view of company performance',
+        'Missed trends hidden inside raw, unstructured data',
+        'Inability to forecast demand or churn accurately'
+      ]
+    },
+    solution: {
+      title: 'Unified Analytics & Predictive Intelligence',
+      desc: 'We connect your sources into a governed warehouse and surface it through interactive dashboards and AI-driven insights anyone in the business can trust.',
+      points: [
+        { title: 'Interactive Dashboards', desc: 'Self-serve Power BI and Looker Studio views with drill-down from board-level KPIs to row detail.' },
+        { title: 'Predictive Analytics & AI Insights', desc: 'Forecast revenue, churn, and demand using Python models surfaced directly in your reports.' },
+        { title: 'Executive Reporting Automation', desc: 'Scheduled, branded digests delivered to leadership without a single manual export.' }
+      ]
+    },
+    deliverables: [
+      'Data warehouse architecture (SQL / Snowflake / BigQuery)',
+      'Interactive Power BI / Tableau dashboard suite',
+      'Automated KPI and executive reporting pipelines',
+      'Predictive models for demand and churn forecasting',
+      'Data governance and access documentation'
+    ],
+    process: [
+      { step: '01', title: 'Source Audit', desc: 'Mapping databases, APIs, and reporting gaps.' },
+      { step: '02', title: 'Warehouse Design', desc: 'Modeling a clean, governed single source of truth.' },
+      { step: '03', title: 'Dashboard Build', desc: 'Crafting interactive KPI and insight views.' },
+      { step: '04', title: 'Rollout & Training', desc: 'Onboarding leaders and automating report delivery.' }
+    ],
+    technologies: ['Power BI', 'Tableau', 'Looker Studio', 'SQL', 'Python', 'Snowflake', 'BigQuery', 'Azure Synapse'],
+    timeline: '4 - 6 Weeks',
+    faqs: [
+      { question: 'Do we need a data engineer on staff to maintain this?', answer: 'No. We deliver documented pipelines and self-serve dashboards your team can operate without engineering support.' },
+      { question: 'Can you predict churn or demand?', answer: 'Yes. We train forecasting models on your historical data and surface probabilities directly inside the dashboards.' }
+    ],
+    testimonial: {
+      review: 'Our monthly board pack went from a 4-day slog to a live dashboard. Leadership finally trusts the numbers and acts in real time.',
+      author: 'Robert Hayes',
+      role: 'CFO',
+      company: 'Meridian Retail',
+      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&auto=format&fit=crop&q=80'
+    }
+  },
+  'saas-development': {
+    id: 'saas-development',
+    title: 'SaaS Platform Development',
+    tagline: 'Ship a multi-tenant product engineered to scale.',
+    heroDesc: 'We architect secure, subscription-ready SaaS platforms with multi-tenant infrastructure, role-based access, billing, and admin dashboards built on modern cloud stacks.',
+    problem: {
+      title: 'Building SaaS Is More Than Shipping Features',
+      desc: 'Most teams underestimate tenancy, billing edge cases, and security. The result is a fragile product that cannot onboard enterprise clients or survive its first traffic spike.',
+      points: [
+        'No clean multi-tenant data isolation strategy',
+        'Billing and subscription logic breaking at scale',
+        'Inconsistent user roles and permission control',
+        'Architecture that crumbles under concurrent load'
+      ]
+    },
+    solution: {
+      title: 'Production-Grade Multi-Tenant SaaS',
+      desc: 'We engineer the full backbone — tenancy, auth, billing, and ops — so you launch a platform enterprises trust and investors back.',
+      points: [
+        { title: 'Multi-Tenant Architecture', desc: 'Isolated, scalable tenants with row-level security and per-org configuration.' },
+        { title: 'Subscription Billing & Auth', desc: 'Stripe/Razorpay billing, SSO-ready auth, and granular user roles out of the box.' },
+        { title: 'Cloud Infrastructure & Admin', desc: 'Containerized deployments with an operations admin dashboard and REST APIs.' }
+      ]
+    },
+    deliverables: [
+      'Multi-tenant backend architecture (PostgreSQL + Row Level Security)',
+      'Authentication, roles, and permission system',
+      'Subscription billing integration (Stripe / Razorpay)',
+      'Operations admin dashboard',
+      'CI/CD pipeline and cloud deployment (AWS / Render)'
+    ],
+    process: [
+      { step: '01', title: 'Platform Design', desc: 'Architecting tenancy, data models, and APIs.' },
+      { step: '02', title: 'Core Engineering', desc: 'Building auth, billing, and role systems.' },
+      { step: '03', title: 'Dashboard & APIs', desc: 'Shipping admin controls and public REST APIs.' },
+      { step: '04', title: 'Scale Deployment', desc: 'Hardening infra and launching with monitoring.' }
+    ],
+    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'Stripe', 'AWS', 'Docker', 'Redis', 'Supabase'],
+    timeline: '8 - 14 Weeks',
+    faqs: [
+      { question: 'Can the platform handle enterprise tenant isolation?', answer: 'Yes. We implement row-level security and per-tenant configuration so each organization’s data is strictly isolated and auditable.' },
+      { question: 'Do you support usage-based billing?', answer: 'Yes. We integrate metered billing with Stripe so you can charge on seats, usage, or hybrid plans reliably.' }
+    ],
+    testimonial: {
+      review: 'We went from concept to a multi-tenant SaaS with real enterprise clients in under three months. The architecture scaled cleanly past our first 10k users.',
+      author: 'Lena Fischer',
+      role: 'Founder & CEO',
+      company: 'Taskflow IO',
+      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&auto=format&fit=crop&q=80'
+    }
+  },
+  'enterprise-content-management': {
+    id: 'enterprise-content-management',
+    title: 'Enterprise Content Management',
+    tagline: 'Govern, secure, and scale your organization’s knowledge.',
+    heroDesc: 'We deploy enterprise-grade document and digital asset management systems with approval workflows, version control, enterprise search, and compliance-ready secure storage.',
+    problem: {
+      title: 'Corporate Knowledge Is Leaking Through the Cracks',
+      desc: 'Documents scatter across email threads, shared drives, and personal laptops. Without governance, teams duplicate work, lose versions, and expose sensitive files to risk.',
+      points: [
+        'Critical files lost across disconnected drives and inboxes',
+        'No audit trail for who changed or approved content',
+        'Compliance gaps from unsecured document storage',
+        'Slow retrieval wasting hours hunting for the right asset'
+      ]
+    },
+    solution: {
+      title: 'Governed, Secure Content Operations',
+      desc: 'We implement a centralized system where every document, asset, and approval is tracked, versioned, and protected by granular permissions.',
+      points: [
+        { title: 'Document & Asset Management', desc: 'A single secure repository for files and rich media with structured metadata.' },
+        { title: 'Approval Workflows & Version Control', desc: 'Configurable sign-off flows with full version history and rollback.' },
+        { title: 'Enterprise Search & Compliance', desc: 'Instant search across repositories plus encrypted, audit-ready storage.' }
+      ]
+    },
+    deliverables: [
+      'Centralized document and digital asset repository',
+      'Configurable approval and review workflows',
+      'Role-based permissions and access policies',
+      'Version control with full audit history',
+      'Enterprise search and compliant secure storage'
+    ],
+    process: [
+      { step: '01', title: 'Content Audit', desc: 'Mapping repositories, owners, and compliance needs.' },
+      { step: '02', title: 'Architecture Setup', desc: 'Designing taxonomy, permissions, and storage.' },
+      { step: '03', title: 'Workflow Build', desc: 'Configuring approvals, versions, and search.' },
+      { step: '04', title: 'Migration & Training', desc: 'Onboarding teams and securing legacy files.' }
+    ],
+    technologies: ['SharePoint', 'Strapi', 'Supabase', 'AWS S3', 'Elasticsearch', 'Node.js', 'TypeScript', 'Docker'],
+    timeline: '5 - 8 Weeks',
+    faqs: [
+      { question: 'Will our existing files migrate safely?', answer: 'Yes. We run a structured migration that preserves metadata, versions, and permissions while cleaning up duplicate content.' },
+      { question: 'Is the storage compliant and secure?', answer: 'Yes. We enforce encryption at rest, role-based access, and full audit logging to meet enterprise compliance requirements.' }
+    ],
+    testimonial: {
+      review: 'We consolidated twelve drives into one governed system. Approvals that took a week now close in a day, and our audit trail is finally airtight.',
+      author: 'Michael Tan',
+      role: 'Director of Operations',
+      company: 'Northbridge Group',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80'
+    }
   }
 };
