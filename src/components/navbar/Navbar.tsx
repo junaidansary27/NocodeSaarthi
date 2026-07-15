@@ -12,6 +12,11 @@ const servicesList = [
   { name: 'Full Stack Development', path: '/services/full-stack-development' },
   { name: 'No-Code Development', path: '/services/no-code-development' },
   { name: 'AI Consulting', path: '/services/ai-consulting' },
+  { name: 'Email Marketing', path: '/services/email-marketing' },
+  { name: 'Mobile Application Development', path: '/services/mobile-application-development' },
+  { name: 'Business Analytics', path: '/services/business-analytics' },
+  { name: 'SaaS Development', path: '/services/saas-development' },
+  { name: 'Enterprise Content Management', path: '/services/enterprise-content-management' },
 ];
 
 export default function Navbar() {
