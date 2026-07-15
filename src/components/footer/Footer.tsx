@@ -19,25 +19,27 @@ export default function Footer() {
     <footer className="border-t border-white/8 bg-secondary-bg/20 backdrop-blur-sm pt-20 pb-8 px-6 relative z-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-16">
         {/* Brand Column */}
-        <div className="lg:col-span-2 space-y-6">
+        <div className="lg:col-span-2 space-y-5">
           <Link to="/" className="flex items-center gap-2 group">
             <img
               src="/logo/logo.png"
               alt="Nocode Saarthi Logo"
-              className="h-8 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
+              className="h-6 w-auto object-contain group-hover:scale-105 transition-transform duration-300"
             />
-            <span className="font-serif font-bold text-xl text-warm-ivory tracking-tight group-hover:text-brand-orange transition-colors duration-300">
+            <span className="font-serif font-bold text-lg text-warm-ivory tracking-tight group-hover:text-brand-orange transition-colors duration-300">
               Nocode <span className="text-brand-orange group-hover:text-warm-ivory transition-colors duration-300">Saarthi</span>
             </span>
           </Link>
+          <p className="text-[10px] font-mono tracking-[0.2em] uppercase text-soft-gray/70">
+            Build • Automate • Grow
+          </p>
           <p className="text-soft-gray text-sm md:text-base max-w-sm font-sans leading-relaxed">
             Building the Future of Business Through AI. We design and deploy enterprise-grade automation, bespoke AI agents, and robust MVPs.
           </p>
-          <div className="space-y-3">
+          <div className="space-y-2">
             <h4 className="text-xs font-semibold text-warm-ivory uppercase tracking-wider">Government Registered MSME Enterprise</h4>
             <p className="text-xs text-soft-gray">Recognized by Ministry of MSME, Government of India</p>
-<img src="/msme/msme-1.png" alt="Official MSME Certification" className="w-[110px] h-auto object-contain mb-4" />
-
+            <img src="/msme/msme-1.png" alt="Official MSME Certification" className="w-12 h-auto object-contain" />
           </div>
         </div>
 
@@ -81,7 +83,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/services/mobile-app-development" className="text-soft-gray hover:text-brand-orange transition-all duration-300 ease-out">
+              <Link to="/services/mobile-application-development" className="text-soft-gray hover:text-brand-orange transition-all duration-300 ease-out">
                 Mobile Application Development
               </Link>
             </li>
@@ -96,7 +98,7 @@ export default function Footer() {
               </Link>
             </li>
             <li>
-              <Link to="/services/enterprise-cms" className="text-soft-gray hover:text-brand-orange transition-all duration-300 ease-out">
+              <Link to="/services/enterprise-content-management" className="text-soft-gray hover:text-brand-orange transition-all duration-300 ease-out">
                 Enterprise Content Management
               </Link>
             </li>
