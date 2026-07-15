@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import {
   ArrowRight, ShieldCheck, Zap, Bot, RefreshCw, Cpu, Database,
-  Layers, MessageSquare
+  Layers, MessageSquare, Mail, Smartphone, BarChart3, Cloud, FolderOpen
 } from 'lucide-react';
 import { Helmet } from 'react-helmet-async';
 import { HoverCard } from '../../components/ui/HoverCard';
@@ -44,6 +44,11 @@ export default function Home() {
     { id: 'mvp-development', title: 'Rapid MVP Development', desc: 'Validate your startup idea fast. Launch responsive visual MVPs in weeks, not months.', icon: <Layers className="w-6 h-6 text-brand-orange" /> },
     { id: 'full-stack-development', title: 'Full Stack Development', desc: 'High-performance React/Node.js structures designed for custom enterprise needs.', icon: <Cpu className="w-6 h-6 text-brand-orange" /> },
     { id: 'no-code-development', title: 'No-Code Solutions', desc: 'Create internal department dashboards, customer databases, and tracking boards.', icon: <Database className="w-6 h-6 text-brand-orange" /> },
+    { id: 'email-marketing', title: 'AI-Powered Email Marketing', desc: 'Automated campaigns, cold outreach, and lead nurturing synced to your CRM.', icon: <Mail className="w-6 h-6 text-brand-orange" /> },
+    { id: 'mobile-application-development', title: 'Mobile App Development', desc: 'Cross-platform iOS and Android apps built with Flutter and React Native.', icon: <Smartphone className="w-6 h-6 text-brand-orange" /> },
+    { id: 'business-analytics', title: 'Business Analytics', desc: 'Interactive Power BI dashboards, KPI tracking, and AI-driven forecasting.', icon: <BarChart3 className="w-6 h-6 text-brand-orange" /> },
+    { id: 'saas-development', title: 'SaaS Development', desc: 'Multi-tenant platforms with billing, auth, and scalable cloud infrastructure.', icon: <Cloud className="w-6 h-6 text-brand-orange" /> },
+    { id: 'enterprise-content-management', title: 'Enterprise Content Management', desc: 'Secure document, asset, and workflow systems with full governance.', icon: <FolderOpen className="w-6 h-6 text-brand-orange" /> },
   ];
 
   const processTimeline = [
